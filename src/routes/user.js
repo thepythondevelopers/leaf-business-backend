@@ -20,7 +20,6 @@ router.post('/api/signup', async (req, res)=>{
 })
 
 router.post('/api/login' , async (req, res) =>{
-
     try{
         const user = await User.findByCredentials(req.body.email, req.body.password)
         res.send(user)
