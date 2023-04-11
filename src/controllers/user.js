@@ -18,9 +18,13 @@ exports.signup = async (req, res)=>{
 exports.login =  async (req, res) =>{
     try{
         const user = await User.findByCredentials(req.body.email, req.body.password)
-        res.send(user)
+        res.send({message : "User logged in"})
     }catch(e){
-        res.status(400).send()
+        if (e.message == 401) {
+            return  res.status(400).send({status : 401 , message : "Invalid credentials"});
+        }
+        res.status(400).send({status : 404 , message : "User not found"});
+          
     }
 }
 
