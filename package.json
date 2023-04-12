@@ -2,7 +2,7 @@
   "name": "leaf-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js", 
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
@@ -18,6 +18,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
     "mongoose": "^7.0.3",
     "terser-webpack-plugin": "^5.3.7",
     "validator": "^13.9.0",
