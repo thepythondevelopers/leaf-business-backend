@@ -25,11 +25,11 @@ app.get('/' , (req,res)=>{
   res.send("Working")
 })
 
-app.listen(port,()=>{
-    console.log('working on port'+ port)
-})
+// app.listen(port,()=>{
+//     console.log('working on port'+ port)
+// })
 
-if (process.env.SSL == "false") {
+if (process.env.SSL == "true") {
   server = https.createServer(
     {
       cert: fs.readFileSync(cert),
