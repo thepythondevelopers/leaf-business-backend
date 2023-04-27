@@ -8,9 +8,6 @@ const yelpRoutes = require('./src/routes/yelp')
 const http = require('http')
 const https = require('https')
 const fs = require('fs')
-const multer = require('multer')
-
-const upload = multer({dest :  'uploads/'})
 
 const env = process.env.ENVIRONMENT;
 const cert = process.env.SSL_CERT;
